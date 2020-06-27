@@ -1,25 +1,43 @@
 package PO;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
-@Table(name = "23-admin")
-public class Admin implements Serializable {
-    private int adminID;
+@Table(name = "admin")
+public class Admin {
+    private int adid;
     private String username;
-    private String password;
+    private String pwd;
     private String roleid;
     private String rolename;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int getAdminID() {
-        return adminID;
+    @Override
+    public String toString() {
+        return "admin{" +
+                "adid=" + adid +
+                ", username='" + username + '\'' +
+                ", pwd='" + pwd + '\'' +
+                ", roleid='" + roleid + '\'' +
+                ", rolename='" + rolename + '\'' +
+                '}';
     }
 
-    public void setAdminID(int adminID) {
-        this.adminID = adminID;
+    public Admin(){}
+    public Admin(String username,String pwd,String roleid,String rolename){
+        this.username=username;
+        this.pwd=pwd;
+        this.roleid=roleid;
+        this.rolename=rolename;
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public int getAdid() {
+        return adid;
+    }
+
+    public void setAdid(int adid) {
+        this.adid = adid;
     }
 
     public String getUsername() {
@@ -30,12 +48,12 @@ public class Admin implements Serializable {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPwd() {
+        return pwd;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
     }
 
     public String getRoleid() {
