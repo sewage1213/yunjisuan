@@ -12,21 +12,21 @@
     <head>
         <style type="text/css">
             body{
-                background-image: url("images/back.png");
+                background-image: url("images/back.jpg");
                 background-repeat: no-repeat;
                 background-size: 100% auto;
             }
         </style>
     </head>
-    <title>登陆成功</title>
+    <title>登录成功</title>
 </head>
 <body>
 <div style="position: absolute;left:0px;top:0px;width: 15%;height: 100%;background-color: #00000060 ">
-    <a href="findAll.action"><p style="color: red;font-size:35;font-family: 华文楷体">查看会员信息</p></a>
+    <a href="findAll.action"><p style="color: red;font-size:35;font-family: 华文楷体">点击此处查看课程信息</p></a>
     <a href="choose.jsp"><p style="color: red;font-size:35;font-family: 华文楷体">退出登录</p></a>
 </div>
 <div style="position: absolute;left: 20%;top: 0px;width: 85%;height: 100%;">
-    <center><h1>欢迎管理员<s:property value="#session.adminUsername"/>登录到学生选课系统</h1></center>
+    <center><h1>欢迎管理员<s:property value="#session.adminUsername"/>登录学生选课系统</h1></center>
 </div>
 </body>
 </html>

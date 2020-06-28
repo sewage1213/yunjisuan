@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+        <action name="adminLogin" class="action.AdminAction">
+            <result name="success">/success.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+
+        <action name="findAll" class="action.StudentAction" method="findAll">
+            <result name="success">/student_query.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <!--根据姓名模糊查询学生信息-->
+        <action name="findByName" class="action.StudentAction" method="findByName">
+            <result name="success">/student_query.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+
+        <!--根据学院模糊查询学生信息-->
+        <action name="findByDept" class="action.StudentAction" method="findByDept">
+            <result name="success">/student_query.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <!--插入学生信息-->
+        <action name="insert" class="action.StudentAction" method="insert">
+            <result name="success" type="chain">findAll</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+        <!--修改学生信息-->
+        <action name="update" class="action.StudentAction" method="update">
+            <result name="success" type="chain">findAll</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+
+        <!--删除学生信息-->
+        <action name="delete" class="action.StudentAction" method="delete">
+            <result name="success" type="chain">findAll</result>
+            <result name="error">/error.jsp</result>
+        </action>
+
+    </package>
+</struts>

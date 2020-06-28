@@ -6,7 +6,7 @@
   <session-factory>
     <property name="driverClassName">com.mysql.cj.jdbc.Driver</property>
     <property name="url">
-      jdbc:mysql://localhost:3306/rg1701-23-rwh?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=GMT%2b8
+      jdbc:mysql://localhost:3306/rg1701-53-dxy?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false&amp;serverTimezone=GMT%2b8
     </property>
     <property name="username">root</property>
     <property name="password">123456</property>
